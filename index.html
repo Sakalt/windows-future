@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Future 資料館</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Windows Future 資料館</h1>
+        <p>Windowsの未来のバージョンに関する資料を集めたサイトです。</p>
+        <button onclick="playSound('startupSound')">Windows 2100 起動音を再生</button>
+        <button onclick="playSound('catsEyeSound')">Windows Cats'eye 音を再生</button>
+        <audio id="startupSound" src="kidouon/windows_2100_sound.wav"></audio>
+        <audio id="catsEyeSound" src="kidouon/cats_eye_sound.wav"></audio>
+    </div>
+    <script>
+        function playSound(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
